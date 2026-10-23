@@ -158,14 +158,15 @@
 
     <h2 id="location">Shield and Location</h2>
     <h3>Why does NetSentinel ask for Location?</h3>
-    <p>iOS only shares the name of the Wi-Fi network you're on, and its access point address, with apps that
-    have Location access with Precise Location on. NetSentinel uses them to tell networks apart, check the
-    Wi-Fi's security and spot look-alike networks. It never reads or stores where you are.</p>
+    <p>iOS only lets NetSentinel read the name of the Wi-Fi network you're on, and its access point address,
+    while it has Location access with Precise Location on, or while its Encrypted DNS is set up in Shield.
+    NetSentinel uses them to tell networks apart, check the Wi-Fi's security and spot look-alike networks. It
+    never reads or stores where you are.</p>
     <p>To allow it: iOS Settings › Privacy &amp; Security › Location Services › NetSentinel, choose While Using
     the App and turn on Precise Location.</p>
     <h3>Can I use NetSentinel without Location?</h3>
-    <p>Yes. Network scans, Tracker Finder, VPN watch and Encrypted DNS work without it. Without the Wi-Fi name,
-    Shield skips its Wi-Fi security, look-alike network and router checks, and alerts about new devices pause on
+    <p>Yes. Network scans, Tracker Finder, VPN watch and Encrypted DNS work without it, and with Encrypted DNS
+    set up, iOS shares the Wi-Fi name anyway. Without the Wi-Fi name, Shield skips its Wi-Fi security, look-alike network and router checks, and alerts about new devices pause on
     networks NetSentinel can't tell apart. Radar then shows “New-device alerts are paused on this network”.</p>
 
     <h2 id="dns">Encrypted DNS</h2>

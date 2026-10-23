@@ -118,14 +118,16 @@
       nearby devices broadcast and measures how strong they are. It never connects to them. The list of nearby
       Bluetooth devices is kept only in memory while the app runs; NetSentinel saves the tags you mark as yours
       and the alerts it raises.</li>
-      <li><strong>Location, only for the Wi-Fi name.</strong> iOS shares the name of the Wi-Fi network you're
-      on, and its access point address, only with apps that have Location access with Precise Location on.
-      NetSentinel asks for Location only to read these, so it can tell networks apart, check the Wi-Fi's
+      <li><strong>Location, only for the Wi-Fi name.</strong> iOS lets NetSentinel read the name of the Wi-Fi
+      network you're on, and its access point address, only while it has Location access with Precise Location
+      on, or while its Encrypted DNS is set up in Shield. NetSentinel asks for Location only to read these, so it
+      can tell networks apart, check the Wi-Fi's
       security and spot look-alike networks. It never reads your location or coordinates. The network name and
       access point address are stored on your device. The network name can appear in alert text on that
       device, and while iCloud sync is on it's saved with each device you mark as trusted in your private
-      iCloud (see <a href="#icloud">iCloud</a>). NetSentinel works without Location; only those checks, and
-      alerts about new devices on networks it can't tell apart, pause.</li>
+      iCloud (see <a href="#icloud">iCloud</a>). NetSentinel works without Location. Unless Encrypted DNS lets
+      it read the network name, only those checks, and alerts about new devices on networks it can't tell apart,
+      pause.</li>
       <li><strong>Camera.</strong> NetSentinel for iPhone and iPad doesn't use the camera.</li>
       <li><strong>Notifications.</strong> To warn you about new devices on your network, trackers that stay near
       you, risky services, likely cameras, and Wi-Fi or VPN problems. NetSentinel creates these notifications on
@@ -200,8 +202,9 @@
     <p>NetSentinel has no in-app purchases or subscriptions, so it never handles payment details.</p>
 
     <h2 id="choices">Your choices</h2>
-    <p>You can turn off any permission at any time in your device's settings (on iPhone and iPad: Settings ›
-    Privacy &amp; Security). NetSentinel keeps working with what's left: without Bluetooth it still scans your
+    <p>You can turn off any permission at any time in your device's Settings: Local Network, Bluetooth and
+    Location under Privacy &amp; Security, and notifications under Notifications › NetSentinel. NetSentinel keeps
+    working with what's left: without Bluetooth it still scans your
     network, and without Location it still finds devices and trackers.</p>
 
     <h2 id="mac">If you use NetSentinel on a Mac</h2>
