@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetSentinel — Support</title>
+<meta name="description" content="Help for NetSentinel Security on iPhone and iPad: network scans, likely cameras, Tracker Finder, Shield and Location, Encrypted DNS, notifications, and deleting your data.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0A1322" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F3F6FA" media="(prefers-color-scheme: light)">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0A1322; --bg-top: #0E1C30; --panel: #101B2C; --line: #1E2B40;
+    --text: #E2E8F0; --soft: #B6C2D2; --muted: #94A3B8;
+    --accent: #34D399; --link: #38BDF8; --focus: #5EEAD4;
+    --grad-a: #10B981; --grad-b: #0EA5E9; --ring: rgba(52, 211, 153, 0.22);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --bg: #F3F6FA; --bg-top: #E6EEF6; --panel: #FFFFFF; --line: #D5DEE8;
+      --text: #0F172A; --soft: #334155; --muted: #475569;
+      --accent: #047857; --link: #0369A1; --focus: #0F766E;
+      --grad-a: #047857; --grad-b: #0369A1; --ring: rgba(4, 120, 87, 0.16);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background-color: var(--bg); background-image: linear-gradient(180deg, var(--bg-top) 0, var(--bg) 380px);
+         background-repeat: no-repeat; color: var(--text); overflow-wrap: break-word;
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -9999px; top: 12px; }
+  .skip:focus { left: 16px; z-index: 1; background: var(--panel); color: var(--text); padding: 8px 12px; border-radius: 8px; }
+  .site { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;
+          padding: 20px 0 16px; border-bottom: 1px solid var(--line); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; text-decoration: none; }
+  .brand::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--ring); }
+  .site ul { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; margin: 0; padding: 0; }
+  .site li { margin: 0; }
+  .site nav a { display: inline-block; padding: 4px 0; color: var(--soft); text-decoration: none; border-bottom: 2px solid transparent; }
+  .site nav a:hover { color: var(--text); border-bottom-color: var(--line); }
+  .site nav a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
+  main { padding: 36px 0 8px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em;
+       background: linear-gradient(90deg, var(--grad-a), var(--grad-b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  h2 { font-size: 19px; line-height: 1.3; margin: 36px 0 8px; color: var(--accent); }
+  h3 { font-size: 16px; line-height: 1.4; margin: 22px 0 4px; }
+  p { margin: 6px 0 12px; }
+  ul, ol { margin: 6px 0 14px; padding-left: 22px; }
+  li { margin: 8px 0; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 20px 0; }
+  .card > :first-child { margin-top: 0; }
+  .card > :last-child { margin-bottom: 0; }
+  .ui { font-weight: 600; }
+  .note { color: var(--soft); }
+  footer { margin-top: 40px; padding: 18px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 420px) { h1 { font-size: 26px; } h2 { font-size: 18px; } .card { padding: 16px; } }
+  @media (forced-colors: active) { h1 { background: none; color: CanvasText; } }
+  @media print {
+    :root { --text: #000; --soft: #222; --muted: #444; --accent: #04573F; --link: #03507A; --line: #BBB; --panel: #FFF; }
+    body { background: none; }
+    .site nav, .skip { display: none; }
+    h1 { background: none; color: #000; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="./">NetSentinel</a>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>NetSentinel Support</h1>
+    <p class="meta">NetSentinel Security for iPhone and iPad · Luke Turner</p>
+
+    <div class="card">
+      <p><strong>Email:</strong>
+      <a href="mailto:lptgators@gmail.com?subject=NetSentinel%20Support">lptgators@gmail.com</a></p>
+      <p class="note">Tell us your device, iOS version and what happened, and we'll get back to you.</p>
+    </div>
+
+    <p class="note">Below, <span class="ui">Radar</span> means the Radar tab on iPhone, or Network in the sidebar
+    on iPad. <span class="ui">Settings</span> means NetSentinel's own settings: the gear at the top of Radar on
+    iPhone, or above the sidebar on iPad. <span class="ui">iOS Settings</span> means the Settings app.</p>
+
+    <h2 id="scanning">Scanning your network</h2>
+    <h3>A scan finds few or no devices.</h3>
+    <p>NetSentinel can only see the network your iPhone or iPad is connected to. Check these:</p>
+    <ul>
+      <li>Local Network access is on for NetSentinel: iOS Settings › Privacy &amp; Security › Local Network.
+      When it's off, Radar shows “Local Network access is off” with an Open Settings button.</li>
+      <li>You're on the same Wi-Fi as the devices you expect to see, not on mobile data or another network. Some
+      routers put guests or smart-home devices on a separate network.</li>
+      <li>Guest networks, and many hotel, café and office networks, stop devices on the same Wi-Fi from seeing
+      each other (client isolation). There NetSentinel may only find the router and your own device. That's how
+      the network is set up, and NetSentinel can't see past it.</li>
+      <li>Some devices sleep or stay quiet until they're used. Tap Scan to scan again (on iPhone you can also
+      pull down on Radar).</li>
+    </ul>
+    <p>On a large network, NetSentinel checks the 256 addresses around your device, and the scan bar says
+    “Scans … only”.</p>
+
+    <h3>Why don't I see hardware addresses, or the maker of some devices?</h3>
+    <p>iOS doesn't let apps read other devices' hardware (MAC) addresses, so a device's page shows
+    “Hidden by iOS” next to Hardware address. NetSentinel names the maker from what a device announces about
+    itself on the network, so a device that announces little shows Manufacturer “Unknown”. This is an iOS
+    limit, not a setting you can change.</p>
+
+    <h2 id="cameras">Likely cameras</h2>
+    <h3>What does “likely camera” mean?</h3>
+    <p>NetSentinel flags a device as a likely camera, and alerts you, when it has a video-streaming port open
+    (such as RTSP) and its maker is one NetSentinel knows for cameras or camera modules. The Cameras filter on
+    Radar, and the likely-camera count on iPhone, also include devices that show only one of those signs. It's
+    an educated guess from what the device shows on the network, not proof: a flagged device could be a video
+    doorbell or a recorder, and a real camera might not be flagged.</p>
+    <h3>NetSentinel found no likely cameras. Does that mean there are none?</h3>
+    <p>No. NetSentinel only sees devices on the Wi-Fi network you're connected to. A camera on another network
+    (such as a recorder's own wired camera network) or on mobile data, or one that only records to a memory
+    card, won't appear. If you're staying
+    somewhere you don't control, also look around the room, especially at anything facing the bed or the
+    bathroom, such as smoke detectors, clocks, chargers and vents. If you find a camera you weren't told about,
+    contact your host or the booking platform.</p>
+
+    <h2 id="trackers">Tracker Finder</h2>
+    <h3>Tracker Finder shows nothing, or says Bluetooth is off.</h3>
+    <p>Tracker Finder needs Bluetooth turned on and Bluetooth access for NetSentinel: iOS Settings › Privacy
+    &amp; Security › Bluetooth. On iPhone and iPad it works while NetSentinel is open. iOS pauses Bluetooth
+    scanning when the app is in the background, so keep NetSentinel on screen while you look.</p>
+    <h3>What can it find?</h3>
+    <p>AirTag and other Find My accessories, Tile, Samsung SmartTag and Google Find My Device tags. In Tracker
+    Finder, choose a potential tracker (they're listed first) to lock on, then walk slowly and pause at each spot: the meter shows when you're
+    getting closer, and above −55 dBm you're within about a metre. Check bags, coat pockets, car seats and under
+    furniture.</p>
+    <p>If a potential tracker stays in range, NetSentinel alerts you after 10 minutes; change the time in
+    <span class="ui">Settings › Alerts</span>. If a tag is yours, open it from Radar's Bluetooth list (the
+    Bluetooth section on iPad) and tap <span class="ui">This is mine</span>.</p>
+    <h3>An AirTag I know is nearby isn't flagged.</h3>
+    <p>An AirTag or other Find My accessory that's near its owner sends the same kind of signal as the owner's
+    iPhone, AirPods and other Apple devices, so NetSentinel can't tell it apart from them. It lists it as
+    “Find My device (near owner)” with the other devices nearby and doesn't flag it, which is normal in public
+    places. When a tag has been separated from its owner, its signal changes, and NetSentinel lists it as
+    “Find My tag (away from owner)” with the potential trackers.</p>
+
+    <h2 id="location">Shield and Location</h2>
+    <h3>Why does NetSentinel ask for Location?</h3>
+    <p>iOS only shares the name of the Wi-Fi network you're on, and its access point address, with apps that
+    have Location access with Precise Location on. NetSentinel uses them to tell networks apart, check the
+    Wi-Fi's security and spot look-alike networks. It never reads or stores where you are.</p>
+    <p>To allow it: iOS Settings › Privacy &amp; Security › Location Services › NetSentinel, choose While Using
+    the App and turn on Precise Location.</p>
+    <h3>Can I use NetSentinel without Location?</h3>
+    <p>Yes. Network scans, Tracker Finder, VPN watch and Encrypted DNS work without it. Without the Wi-Fi name,
+    Shield skips its Wi-Fi security, look-alike network and router checks, and alerts about new devices pause on
+    networks NetSentinel can't tell apart. Radar then shows “New-device alerts are paused on this network”.</p>
+
+    <h2 id="dns">Encrypted DNS</h2>
+    <h3>How do I turn on Encrypted DNS?</h3>
+    <ol>
+      <li>In Shield, choose a resolver under Encrypted DNS, or choose Custom and enter a DNS-over-HTTPS address
+      that starts with https://.</li>
+      <li>Tap <span class="ui">Install Encrypted DNS</span>.</li>
+      <li>Open iOS Settings › General › VPN &amp; Device Management › DNS and choose NetSentinel Shield.</li>
+    </ol>
+    <p>The card shows DoH ACTIVE once iOS uses it. Your DNS lookups then go to the resolver you chose, under its
+    privacy policy. Resolvers marked BLOCKS TRACKERS also block ad and tracker domains across your device; if a
+    site or app stops working, try Quad9 or Cloudflare, which don't block ads.</p>
+    <h3>How do I turn it off or remove it?</h3>
+    <p>To stop using it for now, choose Automatic in iOS Settings › General › VPN &amp; Device Management › DNS.
+    To remove it, tap <span class="ui">Remove</span> on the Encrypted DNS card in Shield. To switch resolvers,
+    choose another one and tap <span class="ui">Update resolver</span>.</p>
+
+    <h2 id="notifications">Notifications</h2>
+    <h3>I'm not getting notifications.</h3>
+    <p>Turn them on in iOS Settings › Notifications › NetSentinel. In NetSentinel, Settings › Alerts shows
+    Allowed when they're on. NetSentinel notifies you about new devices on your network, trackers that stay near
+    you, risky services, likely cameras, and Wi-Fi or VPN problems, and marks the most serious ones Time
+    Sensitive.</p>
+    <p>Tracker alerts need NetSentinel open. While it's in the background, iOS decides when NetSentinel may check
+    your network (Background App Refresh must be on in iOS Settings › General), so some alerts only appear when
+    you open the app. Every alert is also listed under the bell at the top of Radar, or in Alerts in the sidebar
+    on iPad.</p>
+
+    <h2 id="data">Your data</h2>
+    <h3>How do I delete my data?</h3>
+    <p>Open <span class="ui">Settings › Privacy › Erase all scan history and alerts</span>, then tap
+    <span class="ui">Erase</span>. This removes scan history, known devices, trusted devices and alerts from that
+    device. While <span class="ui">Settings › iCloud › Sync trusted devices</span> is on, the devices you trusted
+    are copied back from iCloud the next time NetSentinel syncs. Turn it off first to keep them off this device.
+    To clear only alerts, open Alerts, tap <span class="ui">⋯</span> and choose
+    <span class="ui">Clear history</span>. Deleting the app removes its data from that device.</p>
+    <p>Erasing doesn't change the trusted devices kept in your private iCloud. To remove one from iCloud, open
+    it and tap <span class="ui">Remove from trusted devices</span> while Sync trusted devices is on; the
+    <a href="privacy.html#icloud">privacy policy</a> explains how to remove the rest.</p>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>NetSentinel collects no personal data. It has no accounts, analytics or ads, and your scan results stay on
+    your device. Read the <a href="privacy.html">privacy policy</a>.</p>
+  </main>
+
+  <footer>© 2026 Luke Turner</footer>
+</div>
+</body>
+</html>
