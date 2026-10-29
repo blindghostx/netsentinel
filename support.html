@@ -123,11 +123,11 @@
 
     <h2 id="cameras">Likely cameras</h2>
     <h3>What does “likely camera” mean?</h3>
-    <p>NetSentinel flags a device as a likely camera, and alerts you, when it has a video-streaming port open
-    (such as RTSP) and its maker is one NetSentinel knows for cameras or camera modules. The Cameras filter on
-    Radar, and the likely-camera count on iPhone, also include devices that show only one of those signs. It's
-    an educated guess from what the device shows on the network, not proof: a flagged device could be a video
-    doorbell or a recorder, and a real camera might not be flagged.</p>
+    <p>NetSentinel marks a device as a likely camera when it has a video-streaming port open (such as RTSP) or
+    advertises a video stream over Bonjour. Those devices are tagged CAMERA, appear under the Cameras filter on
+    Radar and are counted as likely cameras on iPhone. It's an educated guess from what the device shows on the
+    network, not proof: a flagged device could be a video doorbell or a recorder, and a real camera might not be
+    flagged. NetSentinel doesn't send a notification for every likely camera; check Radar after a scan.</p>
     <h3>NetSentinel found no likely cameras. Does that mean there are none?</h3>
     <p>No. NetSentinel only sees devices on the Wi-Fi network you're connected to. A camera on another network
     (such as a recorder's own wired camera network) or on mobile data, or one that only records to a memory
@@ -166,8 +166,9 @@
     the App and turn on Precise Location.</p>
     <h3>Can I use NetSentinel without Location?</h3>
     <p>Yes. Network scans, Tracker Finder, VPN watch and Encrypted DNS work without it, and with Encrypted DNS
-    set up, iOS shares the Wi-Fi name anyway. Without the Wi-Fi name, Shield skips its Wi-Fi security, look-alike network and router checks, and alerts about new devices pause on
-    networks NetSentinel can't tell apart. Radar then shows “New-device alerts are paused on this network”.</p>
+    set up, iOS shares the Wi-Fi name anyway. Without the Wi-Fi name, Shield skips its Wi-Fi security and
+    look-alike network checks, and alerts about new devices pause on networks NetSentinel can't tell apart.
+    Radar then shows “New-device alerts are paused on this network”.</p>
 
     <h2 id="dns">Encrypted DNS</h2>
     <h3>How do I turn on Encrypted DNS?</h3>
@@ -188,13 +189,13 @@
     <h2 id="notifications">Notifications</h2>
     <h3>I'm not getting notifications.</h3>
     <p>Turn them on in iOS Settings › Notifications › NetSentinel. In NetSentinel, Settings › Alerts shows
-    Allowed when they're on. NetSentinel notifies you about new devices on your network, trackers that stay near
-    you, risky services, likely cameras, and Wi-Fi or VPN problems, and marks the most serious ones Time
+    Allowed when they're on. NetSentinel notifies you about new devices on a network it has scanned before,
+    risky services, trackers that stay near you, and Wi-Fi or VPN problems, and marks the most serious ones Time
     Sensitive.</p>
-    <p>Tracker alerts need NetSentinel open. While it's in the background, iOS decides when NetSentinel may check
-    your network (Background App Refresh must be on in iOS Settings › General), so some alerts only appear when
-    you open the app. Every alert is also listed under the bell at the top of Radar, or in Alerts in the sidebar
-    on iPad.</p>
+    <p>Tracker, Wi-Fi and VPN alerts need NetSentinel open. While it's in the background, iOS decides when
+    NetSentinel may check your network (Background App Refresh must be on in iOS Settings › General), so some
+    alerts only appear when you open the app. Every alert is also listed under the bell at the top of Radar, or
+    in Alerts in the sidebar on iPad.</p>
 
     <h2 id="data">Your data</h2>
     <h3>How do I delete my data?</h3>
