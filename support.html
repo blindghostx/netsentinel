@@ -94,23 +94,26 @@
       <p class="note">Tell us your device, iOS version and what happened, and we'll get back to you.</p>
     </div>
 
-    <p class="note">Below, <span class="ui">Radar</span> means the Radar tab on iPhone, or Network in the sidebar
-    on iPad. <span class="ui">Settings</span> means NetSentinel's own settings: the gear at the top of Radar on
-    iPhone, or above the sidebar on iPad. <span class="ui">iOS Settings</span> means the Settings app.</p>
+    <p class="note">Below, <span class="ui">Network</span> means the Network tab on iPhone, or Network in the
+    sidebar on iPad. <span class="ui">Settings</span> means NetSentinel's own settings: the gear at the top of
+    Network on iPhone, or above the sidebar on iPad. <span class="ui">iOS Settings</span> means the Settings
+    app.</p>
 
     <h2 id="scanning">Scanning your network</h2>
     <h3>A scan finds few or no devices.</h3>
     <p>NetSentinel can only see the network your iPhone or iPad is connected to. Check these:</p>
     <ul>
       <li>Local Network access is on for NetSentinel: iOS Settings › Privacy &amp; Security › Local Network.
-      When it's off, Radar shows “Local Network access is off” with an Open Settings button.</li>
+      When it's off, Network shows “Local Network access is off” with an Open Settings button.</li>
       <li>You're on the same Wi-Fi as the devices you expect to see, not on mobile data or another network. Some
       routers put guests or smart-home devices on a separate network.</li>
       <li>Guest networks, and many hotel, café and office networks, stop devices on the same Wi-Fi from seeing
       each other (client isolation). There NetSentinel may only find the router and your own device. That's how
       the network is set up, and NetSentinel can't see past it.</li>
+      <li>On an IPv6-only Wi-Fi network, Network shows “Can't scan this network”: the scan checks the
+      network's IPv4 addresses, and there are none. Shield and Tracker Finder still work there.</li>
       <li>Some devices sleep or stay quiet until they're used. Tap Scan to scan again (on iPhone you can also
-      pull down on Radar).</li>
+      pull down on Network).</li>
     </ul>
     <p>On a large network, NetSentinel checks the 256 addresses around your device, and the scan bar says
     “Scans … only”.</p>
@@ -125,9 +128,9 @@
     <h3>What does “likely camera” mean?</h3>
     <p>NetSentinel marks a device as a likely camera when it has a video-streaming port open (such as RTSP) or
     advertises a video stream over Bonjour. Those devices are tagged CAMERA, appear under the Cameras filter on
-    Radar and are counted as likely cameras on iPhone. It's an educated guess from what the device shows on the
+    Network and are counted as likely cameras on iPhone. It's an educated guess from what the device shows on the
     network, not proof: a flagged device could be a video doorbell or a recorder, and a real camera might not be
-    flagged. NetSentinel doesn't send a notification for every likely camera; check Radar after a scan.</p>
+    flagged. NetSentinel doesn't send a notification for every likely camera; check Network after a scan.</p>
     <h3>NetSentinel found no likely cameras. Does that mean there are none?</h3>
     <p>No. NetSentinel only sees devices on the Wi-Fi network you're connected to. A camera on another network
     (such as a recorder's own wired camera network) or on mobile data, or one that only records to a memory
@@ -147,7 +150,7 @@
     getting closer, and above −55 dBm you're within about a metre. Check bags, coat pockets, car seats and under
     furniture.</p>
     <p>If a potential tracker stays in range, NetSentinel alerts you after 10 minutes; change the time in
-    <span class="ui">Settings › Alerts</span>. If a tag is yours, open it from Radar's Bluetooth list (the
+    <span class="ui">Settings › Alerts</span>. If a tag is yours, open it from the Bluetooth list on Network (the
     Bluetooth section on iPad) and tap <span class="ui">This is mine</span>.</p>
     <h3>An AirTag I know is nearby isn't flagged.</h3>
     <p>An AirTag or other Find My accessory that's near its owner sends the same kind of signal as the owner's
@@ -162,13 +165,15 @@
     while it has Location access with Precise Location on, or while its Encrypted DNS is set up in Shield.
     NetSentinel uses them to tell networks apart, check the Wi-Fi's security and spot look-alike networks. It
     never reads or stores where you are.</p>
-    <p>To allow it: iOS Settings › Privacy &amp; Security › Location Services › NetSentinel, choose While Using
-    the App and turn on Precise Location.</p>
+    <p>To allow it, tap <span class="ui">Continue</span> under Shield's findings, or on the banner on Network,
+    then choose Allow While Using App and keep Precise on. If you've answered before, the button reads
+    <span class="ui">Open Settings</span> instead. In iOS Settings › Privacy &amp; Security › Location Services ›
+    NetSentinel, choose While Using the App and turn on Precise Location.</p>
     <h3>Can I use NetSentinel without Location?</h3>
     <p>Yes. Network scans, Tracker Finder, VPN watch and Encrypted DNS work without it, and with Encrypted DNS
     set up, iOS shares the Wi-Fi name anyway. Without the Wi-Fi name, Shield skips its Wi-Fi security and
     look-alike network checks, and alerts about new devices pause on networks NetSentinel can't tell apart.
-    Radar then shows “New-device alerts are paused on this network”.</p>
+    Network then shows “New-device alerts are paused on this network”.</p>
 
     <h2 id="dns">Encrypted DNS</h2>
     <h3>How do I turn on Encrypted DNS?</h3>
@@ -179,8 +184,8 @@
       <li>Open iOS Settings › General › VPN &amp; Device Management › DNS and choose NetSentinel Shield.</li>
     </ol>
     <p>The card shows DoH ACTIVE once iOS uses it. Your DNS lookups then go to the resolver you chose, under its
-    privacy policy. Resolvers marked BLOCKS TRACKERS also block ad and tracker domains across your device; if a
-    site or app stops working, try Quad9 or Cloudflare, which don't block ads.</p>
+    privacy policy. AdGuard DNS, marked BLOCKS TRACKERS, also blocks ad and tracker domains across your device;
+    if a site or app stops working, try Quad9 or Cloudflare, which don't block ads.</p>
     <h3>How do I turn it off or remove it?</h3>
     <p>To stop using it for now, choose Automatic in iOS Settings › General › VPN &amp; Device Management › DNS.
     To remove it, tap <span class="ui">Remove</span> on the Encrypted DNS card in Shield. To switch resolvers,
@@ -188,13 +193,15 @@
 
     <h2 id="notifications">Notifications</h2>
     <h3>I'm not getting notifications.</h3>
-    <p>Turn them on in iOS Settings › Notifications › NetSentinel. In NetSentinel, Settings › Alerts shows
-    Allowed when they're on. NetSentinel notifies you about new devices on a network it has scanned before,
+    <p>In NetSentinel, <span class="ui">Settings › Alerts</span> shows Allowed when they're on. Otherwise tap
+    <span class="ui">Turn On</span> there, or <span class="ui">Turn On in Settings</span> if you turned them off
+    before, which opens iOS Settings › Notifications › NetSentinel. NetSentinel notifies you about new devices
+    on a network it has scanned before,
     risky services, trackers that stay near you, and Wi-Fi or VPN problems, and marks the most serious ones Time
     Sensitive.</p>
     <p>Tracker, Wi-Fi and VPN alerts need NetSentinel open. While it's in the background, iOS decides when
     NetSentinel may check your network (Background App Refresh must be on in iOS Settings › General), so some
-    alerts only appear when you open the app. Every alert is also listed under the bell at the top of Radar, or
+    alerts only appear when you open the app. Every alert is also listed under the bell at the top of Network, or
     in Alerts in the sidebar on iPad.</p>
 
     <h2 id="data">Your data</h2>
